@@ -193,7 +193,7 @@ when creating a product like Tranzakt.
 * Documentation: <https://laravel.com/docs/9.x/>
 
 * Github:  <https://github.com/laravel/laravel>
-* Currently used version: Laravel 9.2.1, Laravel Framework 9.20.0
+* Currently used version: Laravel 9.3.1, Laravel Framework 9.22.1
 
 Laravel has been chosen as the foundation framework on which Tranzakt will be built
 because it provides:
@@ -273,20 +273,18 @@ The same package should be used by Tranzakt Standalone.
 The above packages are those required for the various Tranzakt packages to run.
 In addition the following packages are included to assist with development of Tranzakt itself:
 
-#### Nicolas Widart's Laravel Modules
+#### InterNACHI Modular
 
-* Documentation: <https://docs.laravelmodules.com/>
-* Github:  <https://github.com/nWidart/laravel-modules>
-* Currently used version: 9.0.1
+* Documentation: <https://github.com/InterNACHI/modular>
+* Github:  <https://github.com/InterNACHI/modular>
+* Currently used version: 1.9.0
 
 Provides support for Modules - creation of separate instances of the standard Laravel
 directories in order to separate out logically independent sections of code (like packages).
 
 Alternatives rejected:
 [Caffeinate Modules](https://github.com/caffeinated/modules),
-[Flutterando Modular](https://github.com/Flutterando/modular),
-[InterNACHI Modular](https://github.com/InterNACHI/modular),
-[Keljtanoski Modular Laravel](https://github.com/keljtanoski/modular-laravel).
+[Nicolas Widart's Laravel Modules](https://github.com/nWidart/laravel-modules)
 
 #### Wikimedia's Composer Merge Plugin
 
