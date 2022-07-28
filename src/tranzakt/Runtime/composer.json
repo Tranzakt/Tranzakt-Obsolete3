@@ -1,0 +1,24 @@
+{
+	"name": "tranzakt/tranzakt-runtime",
+	"description": "",
+	"type": "library",
+	"version": "0.1",
+	"license": "LGPL-2.1-or-later",
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Tranzakt\\Runtime\\": "app/",
+			"Tranzakt\\Runtime\\Tests\\": "tests/",
+			"Tranzakt\\Runtime\\Database\\Factories\\": "database/factories/",
+			"Tranzakt\\Runtime\\Database\\Seeders\\": "database/seeders/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Tranzakt\\Runtime\\Providers\\RuntimeServiceProvider"
+			]
+		}
+	}
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e22252d1e104961aabc9014b5d6d19d4",
+    "content-hash": "6a8a23f3621e7cb0fb4b636129698e03",
     "packages": [
         {
             "name": "brick/math",
@@ -5995,6 +5995,70 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.4"
             },
             "time": "2021-12-08T09:12:39+00:00"
+        },
+        {
+            "name": "tranzakt/tranzakt-developer",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "tranzakt/Developer",
+                "reference": "ec2a1ae31a5d0905fc518db87e0995604a6b7218"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tranzakt\\Developer\\Providers\\DeveloperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tranzakt\\Developer\\": "app/",
+                    "Tranzakt\\Developer\\Tests\\": "tests/",
+                    "Tranzakt\\Developer\\Database\\Factories\\": "database/factories/",
+                    "Tranzakt\\Developer\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "tranzakt/tranzakt-runtime",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "tranzakt/Runtime",
+                "reference": "6a54248162904e16ae2779e3f48819cc4346304e"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tranzakt\\Runtime\\Providers\\RuntimeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tranzakt\\Runtime\\": "app/",
+                    "Tranzakt\\Runtime\\Tests\\": "tests/",
+                    "Tranzakt\\Runtime\\Database\\Factories\\": "database/factories/",
+                    "Tranzakt\\Runtime\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "vlucas/phpdotenv",

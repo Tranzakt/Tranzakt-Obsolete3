@@ -1,9 +1,13 @@
 {
-    "name": "laravel/laravel",
+    "name": "tranzakt/tranzakt",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
+	"version": "0.1",
+    "description": "Tranzakt web app builder.",
+    "keywords": [
+        "tranzakt",
+        "builder"
+    ],
+    "license": "LGPL-2.1-or-later",
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
@@ -11,6 +15,8 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "tranzakt/tranzakt-developer": "*",
+        "tranzakt/tranzakt-runtime": "*",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
     "require-dev": {
@@ -37,7 +43,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "php artisan modules:sync"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -57,8 +64,7 @@
             "include": [
                 "tranzakt/*/composer.json"
             ],
-            "require": [
-            ],
+            "require": [],
             "recurse": true,
             "replace": false,
             "ignore-duplicates": true,
@@ -77,5 +83,14 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "tranzakt\\*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }
