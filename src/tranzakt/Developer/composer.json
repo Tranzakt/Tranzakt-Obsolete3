@@ -4,7 +4,9 @@
 	"type": "library",
 	"version": "0.1",
 	"license": "LGPL-2.1-or-later",
-	"require": {},
+	"require": {
+		"barryvdh/laravel-debugbar": "^3.7"
+	},
 	"autoload": {
 		"psr-4": {
 			"Tranzakt\\Developer\\": "app/",
