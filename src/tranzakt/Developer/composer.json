@@ -1,9 +1,10 @@
 {
 	"name": "tranzakt/tranzakt-developer",
-	"description": "",
-	"type": "library",
+	"description": "The Laravel Application Generator!",
 	"version": "0.1",
-	"license": "LGPL-2.1-or-later",
+	"type": "library",
+	"homepage": "https://github.com/Tranzakt",
+	"license": "GNU AGPLv3",
 	"require": {
 		"barryvdh/laravel-debugbar": "^3.7"
 	},
@@ -14,9 +15,15 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Tranzakt\\Developer\\Tests\\": "Core/tests/",
 			"Tranzakt\\Developer\\Database\\Factories\\": "Core/database/factories/",
-			"Tranzakt\\Developer\\Database\\Seeders\\": "Core/database/seeders/"
+			"Tranzakt\\Developer\\Database\\Seeders\\": "Core/database/seeders/",
+			"Tranzakt\\Developer\\Apps\\Database\\Factories\\": "Apps/database/factories/",
+			"Tranzakt\\Developer\\Apps\\Database\\Seeders\\": "Apps/database/seeders/",
+			"Tranzakt\\Developer\\Tables\\Database\\Factories\\": "Apps/database/factories/",
+			"Tranzakt\\Developer\\Tables\\Database\\Seeders\\": "Apps/database/seeders/",
+			"Tranzakt\\Developer\\Tests\\": "Core/tests/",
+			"Tranzakt\\Developer\\Apps\\Tests\\": "Apps/tests/",
+			"Tranzakt\\Developer\\Tables\\Tests\\": "Tables/tests/"
 		}
 	},
 	"minimum-stability": "stable",
