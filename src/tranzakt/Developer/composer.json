@@ -9,10 +9,14 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Tranzakt\\Developer\\": "app/",
-			"Tranzakt\\Developer\\Tests\\": "tests/",
-			"Tranzakt\\Developer\\Database\\Factories\\": "database/factories/",
-			"Tranzakt\\Developer\\Database\\Seeders\\": "database/seeders/"
+			"Tranzakt\\Developer\\": "Core/app/",
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			// "Tranzakt\\Developer\\Tests\\": "Core/tests/",
+			// "Tranzakt\\Developer\\Database\\Factories\\": "Core/database/factories/",
+			// "Tranzakt\\Developer\\Database\\Seeders\\": "Core/database/seeders/"
 		}
 	},
 	"minimum-stability": "stable",
