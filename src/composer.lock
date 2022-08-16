@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46d370d8c8d81f0599933d850f57627c",
+    "content-hash": "6582094f2aecdf7f468de486507ec599",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -223,25 +223,99 @@
             "time": "2022-07-20T07:14:26+00:00"
         },
         {
-            "name": "composer/composer",
-            "version": "2.3.10",
+            "name": "composer/class-map-generator",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/composer/composer.git",
-                "reference": "ebac357c0a41359f3981098729042ed6dedc97ba"
+                "url": "https://github.com/composer/class-map-generator.git",
+                "reference": "1e1cb2b791facb2dfe32932a7718cf2571187513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/ebac357c0a41359f3981098729042ed6dedc97ba",
-                "reference": "ebac357c0a41359f3981098729042ed6dedc97ba",
+                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/1e1cb2b791facb2dfe32932a7718cf2571187513",
+                "reference": "1e1cb2b791facb2dfe32932a7718cf2571187513",
+                "shasum": ""
+            },
+            "require": {
+                "composer/pcre": "^2 || ^3",
+                "php": "^7.2 || ^8.0",
+                "symfony/finder": "^4.4 || ^5.3 || ^6"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.6",
+                "phpstan/phpstan-deprecation-rules": "^1",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "symfony/filesystem": "^5.4 || ^6",
+                "symfony/phpunit-bridge": "^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\ClassMapGenerator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "https://seld.be"
+                }
+            ],
+            "description": "Utilities to scan PHP code and generate class maps.",
+            "keywords": [
+                "classmap"
+            ],
+            "support": {
+                "issues": "https://github.com/composer/class-map-generator/issues",
+                "source": "https://github.com/composer/class-map-generator/tree/1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-06-19T11:31:27+00:00"
+        },
+        {
+            "name": "composer/composer",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/composer.git",
+                "reference": "026d6de6ea2c913974a7756661a3faac135cb36e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/composer/zipball/026d6de6ea2c913974a7756661a3faac135cb36e",
+                "reference": "026d6de6ea2c913974a7756661a3faac135cb36e",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.0",
+                "composer/class-map-generator": "^1.0",
                 "composer/metadata-minifier": "^1.0",
                 "composer/pcre": "^2 || ^3",
                 "composer/semver": "^3.0",
-                "composer/spdx-licenses": "^1.2",
+                "composer/spdx-licenses": "^1.5.7",
                 "composer/xdebug-handler": "^2.0.2 || ^3.0.3",
                 "justinrainbow/json-schema": "^5.2.11",
                 "php": "^7.2.5 || ^8.0",
@@ -249,7 +323,8 @@
                 "react/promise": "^2.8",
                 "seld/jsonlint": "^1.4",
                 "seld/phar-utils": "^1.2",
-                "symfony/console": "^5.4.7 || ^6.0.7",
+                "seld/signal-handler": "^2.0",
+                "symfony/console": "^5.4.11 || ^6.0.11",
                 "symfony/filesystem": "^5.4 || ^6.0",
                 "symfony/finder": "^5.4 || ^6.0",
                 "symfony/polyfill-php73": "^1.24",
@@ -275,7 +350,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.3-dev"
+                    "dev-main": "2.4-dev"
                 },
                 "phpstan": {
                     "includes": [
@@ -314,7 +389,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.3.10"
+                "source": "https://github.com/composer/composer/tree/2.4.0"
             },
             "funding": [
                 {
@@ -330,7 +405,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-13T13:48:23+00:00"
+            "time": "2022-08-16T14:10:48+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -1667,16 +1742,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.24.0",
+            "version": "v9.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "053840f579cf01d353d81333802afced79b1c0af"
+                "reference": "e8af8c2212e3717757ea7f459a655a2e9e771109"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/053840f579cf01d353d81333802afced79b1c0af",
-                "reference": "053840f579cf01d353d81333802afced79b1c0af",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e8af8c2212e3717757ea7f459a655a2e9e771109",
+                "reference": "e8af8c2212e3717757ea7f459a655a2e9e771109",
                 "shasum": ""
             },
             "require": {
@@ -1843,7 +1918,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-08-09T13:43:22+00:00"
+            "time": "2022-08-16T16:36:05+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3848,6 +3923,138 @@
                 "source": "https://github.com/Seldaek/phar-utils/tree/1.2.0"
             },
             "time": "2021-12-10T11:20:11+00:00"
+        },
+        {
+            "name": "seld/signal-handler",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/signal-handler.git",
+                "reference": "f69d119511dc0360440cdbdaa71829c149b7be75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/signal-handler/zipball/f69d119511dc0360440cdbdaa71829c149b7be75",
+                "reference": "f69d119511dc0360440cdbdaa71829c149b7be75",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpstan/phpstan-strict-rules": "^1.3",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.23",
+                "psr/log": "^1 || ^2 || ^3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Seld\\Signal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Simple unix signal handler that silently fails where signals are not supported for easy cross-platform development",
+            "keywords": [
+                "posix",
+                "sigint",
+                "signal",
+                "sigterm",
+                "unix"
+            ],
+            "support": {
+                "issues": "https://github.com/Seldaek/signal-handler/issues",
+                "source": "https://github.com/Seldaek/signal-handler/tree/2.0.1"
+            },
+            "time": "2022-07-20T18:31:45+00:00"
+        },
+        {
+            "name": "sqits/laravel-userstamps",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sqits/laravel-userstamps.git",
+                "reference": "83036f140c34638030730512f88fec365b89d3d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sqits/laravel-userstamps/zipball/83036f140c34638030730512f88fec365b89d3d4",
+                "reference": "83036f140c34638030730512f88fec365b89d3d4",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.6|^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.6",
+                "larapack/dd": "^1.0",
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^7.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sqits\\UserStamps\\UserStampsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sqits\\UserStamps\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sqits",
+                    "email": "info@sqits.nl",
+                    "homepage": "https://www.sqits.nl",
+                    "role": "Company"
+                },
+                {
+                    "name": "Ruud Schaaphuizen",
+                    "email": "r.schaaphuizen@sqits.nl",
+                    "homepage": "https://www.sqits.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Package to add created_by, updated_by and deleted_by to models.",
+            "homepage": "https://github.com/sqits/laravel-userstamps",
+            "keywords": [
+                "created",
+                "deleted",
+                "laravel",
+                "updated",
+                "userstamps"
+            ],
+            "support": {
+                "issues": "https://github.com/sqits/laravel-userstamps/issues",
+                "source": "https://github.com/sqits/laravel-userstamps/tree/master"
+            },
+            "time": "2022-04-29T20:24:32+00:00"
         },
         {
             "name": "symfony/console",
@@ -6151,7 +6358,7 @@
             "dist": {
                 "type": "path",
                 "url": "tranzakt/Developer",
-                "reference": "52f9f9a4a5781eed818e0279dbae37d8da3d5839"
+                "reference": "1e4285ec521dead2eab808245ed58dfe1cc2c7e4"
             },
             "require": {
                 "barryvdh/laravel-debugbar": "^3.7"
@@ -6166,15 +6373,27 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Tranzakt\\Developer\\": "app/",
-                    "Tranzakt\\Developer\\Tests\\": "tests/",
-                    "Tranzakt\\Developer\\Database\\Factories\\": "database/factories/",
-                    "Tranzakt\\Developer\\Database\\Seeders\\": "database/seeders/"
+                    "Tranzakt\\Developer\\": "Core/app/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tranzakt\\Developer\\Database\\Factories\\": "Core/database/factories/",
+                    "Tranzakt\\Developer\\Database\\Seeders\\": "Core/database/seeders/",
+                    "Tranzakt\\Developer\\Apps\\Database\\Factories\\": "Apps/database/factories/",
+                    "Tranzakt\\Developer\\Apps\\Database\\Seeders\\": "Apps/database/seeders/",
+                    "Tranzakt\\Developer\\Tables\\Database\\Factories\\": "Apps/database/factories/",
+                    "Tranzakt\\Developer\\Tables\\Database\\Seeders\\": "Apps/database/seeders/",
+                    "Tranzakt\\Developer\\Tests\\": "Core/tests/",
+                    "Tranzakt\\Developer\\Apps\\Tests\\": "Apps/tests/",
+                    "Tranzakt\\Developer\\Tables\\Tests\\": "Tables/tests/"
                 }
             },
             "license": [
-                "LGPL-2.1-or-later"
+                "GNU AGPLv3"
             ],
+            "description": "The Laravel Application Generator!",
+            "homepage": "https://github.com/Tranzakt",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -6186,7 +6405,10 @@
             "dist": {
                 "type": "path",
                 "url": "tranzakt/Runtime",
-                "reference": "f57f6d5fe1857c56d93a173a7f4066b495ed3eb2"
+                "reference": "b99c3da22592388d6ffa8c7902ad65e469ff5fb8"
+            },
+            "require": {
+                "sqits/laravel-userstamps": "dev-master"
             },
             "type": "library",
             "extra": {
@@ -6197,8 +6419,15 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "helpers/SubmoduleDirs.php"
+                ],
                 "psr-4": {
-                    "Tranzakt\\Runtime\\": "app/",
+                    "Tranzakt\\Runtime\\": "app/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
                     "Tranzakt\\Runtime\\Tests\\": "tests/",
                     "Tranzakt\\Runtime\\Database\\Factories\\": "database/factories/",
                     "Tranzakt\\Runtime\\Database\\Seeders\\": "database/seeders/"
@@ -6859,16 +7088,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.15.2",
+            "version": "v1.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "8eb6d7116deda5b0e26153c1993f3e326d67768c"
+                "reference": "7e7222ef0b0d7f0a0b9635543c0d7d09ef720cf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/8eb6d7116deda5b0e26153c1993f3e326d67768c",
-                "reference": "8eb6d7116deda5b0e26153c1993f3e326d67768c",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/7e7222ef0b0d7f0a0b9635543c0d7d09ef720cf1",
+                "reference": "7e7222ef0b0d7f0a0b9635543c0d7d09ef720cf1",
                 "shasum": ""
             },
             "require": {
@@ -6915,7 +7144,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-08-08T20:02:04+00:00"
+            "time": "2022-08-16T14:53:54+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -10053,7 +10282,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "sqits/laravel-userstamps": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -4,10 +4,19 @@
 	"type": "library",
 	"version": "0.1",
 	"license": "LGPL-2.1-or-later",
-	"require": {},
+	"require": {
+		"sqits/laravel-userstamps": "dev-master"
+	},
 	"autoload": {
+		"files": [
+			"helpers/SubmoduleDirs.php"
+		],
 		"psr-4": {
-			"Tranzakt\\Runtime\\": "app/",
+			"Tranzakt\\Runtime\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
 			"Tranzakt\\Runtime\\Tests\\": "tests/",
 			"Tranzakt\\Runtime\\Database\\Factories\\": "database/factories/",
 			"Tranzakt\\Runtime\\Database\\Seeders\\": "database/seeders/"

@@ -15,7 +15,6 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "tranzakt/developer/-tables": "*",
         "tranzakt/tranzakt-developer": "*",
         "tranzakt/tranzakt-runtime": "*",
         "wikimedia/composer-merge-plugin": "^2.0"
@@ -47,7 +46,7 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
             "@php artisan modules:sync",
-            "@php ./vendor/bin/testbench package:discover --ansi"
+            "@php ./vendor/bin/testbench package:discover --quiet"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
