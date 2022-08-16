@@ -5,7 +5,8 @@
 	"version": "0.1",
 	"license": "LGPL-2.1-or-later",
 	"require": {
-		"sqits/laravel-userstamps": "dev-master"
+		"sqits/laravel-userstamps": "dev-master",
+		"webpatser/laravel-uuid": "^4.0"
 	},
 	"autoload": {
 		"files": [

@@ -230,6 +230,18 @@ because it provides:
 Provides created_by, updated_by and (for softDelete tables) deleted_by fields
 akin to the created_at, updated_at and (for softDelete tables) deleted_at fields.
 
+#### Webpatser Laravel Uuid
+
+* Documentation: <https://github.com/webpatser/laravel-uuid>
+
+* Github:  <https://github.com/webpatser/laravel-uuid>
+* Currently used version: * (from master)
+
+Provides support for UUID.
+
+The unique ID for calling a specific Tranzakt Runtime through an API
+will be a UUID.
+
 #### Laravel Localization
 
 * Documentation: <https://laravel.com/docs/9.x/>
