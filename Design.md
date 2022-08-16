@@ -45,10 +45,12 @@ to match whatever front-end technology is used by the rest of the front-end envi
   * Blade + jQuery
   * Livewire + Tailwind
   * Vue.js
+  * React.js
+  * Svelte
+  * Bootstrap x
 
     Blade (which is Laravel templating of HTML) + Livewire should be the
-    first technology supported (because it is the simplest),
-    with Vue.js as a second technology supported.
+    first technology supported (because it is the simplest).
 
     Within these, Tranzakt must support easy visual tailoring using CSS classes etc.
 
@@ -78,10 +80,26 @@ i.e. defining tables, forms etc.
 This would support a minimal core set of data types and visualizers that
 covering basic displays (lists and forms) and basic fields (text/numeric input, dropdown).
 
-Trazakt Developer is effectively a stand-alone Laravel environment with
-it's own Admin / Security based on Vue.js and Laravel Jetstream.
+Trazakt Developer is effectively a stand-alone Laravel module
+which provides a GUI through which a user can define
+all (or most) of the Laravel code functions,
+conforming as best as possible to Laravel best practices.
+
+Unlike Tranzakt Runtime, Tranzakt Developer will support a single front-end framework
+(though at the time of writing this has not yet been chosen).
 Hopefully this will not create any incompatibilities with any other packages that
 may have been installed by the user in the Laravel instance.
+
+**Note:** From the front-end frameworks identified for Tranzakt Runtime,
+it is believed that:
+
+* Vue.js should not be used as it is too flexible in the choice
+of coding approach, which will potentially result in maintenance difficulties
+for different parts having been coded by different people at different times.
+
+* Blade may be used for the PoC in order to keep things extremely simple,
+however Blade is not (in itself) an SPA and it is anticipated that an SPA
+approach will deliver a much more fluid and performant GUI experience.
 
 ### Tranzakt visualisation and field (etc.) packages
 
@@ -268,6 +286,14 @@ The same package should be used by Tranzakt Standalone.
 
 ### Laravel Developer - Browser Dependencies
 
+### Tranzakt development - Submodules
+
+TBD but it may be sensible for code separation to have separate submodule directories for different functions of TD i.e.:
+
+* Tranzakt Developer Tables
+* Tranzakt Developer Forms
+* Tranzakt Developer Visualizers
+
 ### Tranzakt development - Server Dependencies
 
 The above packages are those required for the various Tranzakt packages to run.
@@ -283,8 +309,10 @@ Provides support for Modules - creation of separate instances of the standard La
 directories in order to separate out logically independent sections of code (like packages).
 
 Alternatives rejected:
-[Caffeinate Modules](https://github.com/caffeinated/modules),
-[Nicolas Widart's Laravel Modules](https://github.com/nWidart/laravel-modules)
+
+* [Caffeinate Modules](https://github.com/caffeinated/modules),
+* [Nicolas Widart's Laravel Modules](https://github.com/nWidart/laravel-modules) -
+Too constraining, fundamental poor approach to module identification (search subdirectories = poor performance)
 
 #### Wikimedia's Composer Merge Plugin
 
@@ -322,8 +350,17 @@ what (Laravel) code to run.
 
 Tranzakt Admin & Tranzakt Developer will have their own standardised routing,
 as will the API to be used by e.g. Joomla or Wordpress -
-and these will be (by default) /Tranzact/Admin/... or /Tranzakt/Dev/... or /Tranzakt/API/...
-(though these will need to be easily changeable if they conflict with other Routes).
+and these will be (by default) e.g.:
+
+* /Tranzact/Admin/... - for Runtime / Dev / administration
+* /Tranzakt/Dev/... - for Development GUI
+* /Tranzakt/Form/...
+* /Tranzakt/List/...
+* ...
+* /API/Tranzakt/Rest or Joomla or WP etc./V1/Form or List etc./...
+
+The runtime routes will, of course, be sluggable for SEO, and
+it is possible that these defaults will also need to be easily changeable if they conflict with other Routes.
 Standalone runtime URLs will need to be able to be aliased in order for developers
 to do SEO.
 
