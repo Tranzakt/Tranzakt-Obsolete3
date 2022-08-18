@@ -47,9 +47,9 @@ to match whatever front-end technology is used by the rest of the front-end envi
   * Vue.js
   * React.js
   * Svelte
-  * Bootstrap x
+  * Bootstrap + jQuery
 
-    Blade (which is Laravel templating of HTML) + Livewire should be the
+    Blade (which is Laravel templating of HTML) should be the
     first technology supported (because it is the simplest).
 
     Within these, Tranzakt must support easy visual tailoring using CSS classes etc.
