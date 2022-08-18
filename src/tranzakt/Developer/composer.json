@@ -11,7 +11,10 @@
 	"autoload": {
 		"psr-4": {
 			"Tranzakt\\Developer\\": "Core/app/"
-		}
+		},
+		"classmap": [
+			"Core/traits"
+		]
 	},
 	"autoload-dev": {
 		"psr-4": {
